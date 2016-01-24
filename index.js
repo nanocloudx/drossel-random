@@ -8,7 +8,7 @@ function drosselRandom(length, check) {
     throw new Error('drossel-random: require number argument (1 or more).');
   }
   var result;
-  var safety = 100; //if collision check failure, will retry up to 100 times.
+  var safety = 100; //if duplicate check failure, will retry up to 100 times.
   do {
     safety--;
     result = '';

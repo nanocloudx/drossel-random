@@ -39,3 +39,9 @@ for (var i = 0; i < 3; i++) {
 }
 console.log(checker) //["uL9K3", "Fo2PT", "mSk2V"]
 ```
+
+## Note
+Maximum value of the unique string is `62^length`.  
+but, if generated strings was duplicate, it will retry up to 100 times internally.  
+and if reached the upper limit of the retry, it will throw an error.  
+recommended that you increment string length.  
