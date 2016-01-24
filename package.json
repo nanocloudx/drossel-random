@@ -1,0 +1,22 @@
+{
+  "name": "drossel-random",
+  "version": "1.0.0",
+  "description": "Unnecessary random string generator",
+  "author": "nanocloudx <nanocloudx@gmail.com>",
+  "homepage": "http://drossel.io/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nanocloudx/drossel-random.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "random"
+  ],
+  "dependencies": {
+    "lodash": "^3.10.1"
+  }
+}
