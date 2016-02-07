@@ -3,7 +3,9 @@
 // output string range
 var _str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
-function drosselRandom(length, check) {
+var drosselRandom = {};
+
+drosselRandom.generate = function(length, check) {
   if (typeof length !== 'number' || length < 1) {
     throw new Error('drossel-random: require number argument (1 or more).');
   }
@@ -20,6 +22,11 @@ function drosselRandom(length, check) {
     throw new Error('drossel-random: length is too short.');
   }
   return result;
+};
+
+drosselRandom.isValid = function(value, length) {
+  var regexp = new RegExp('^[a-zA-Z0-9]{' + length + '}$')
+  return regexp.test(value);
 }
 
 module.exports = drosselRandom;

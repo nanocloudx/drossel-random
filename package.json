@@ -1,6 +1,6 @@
 {
   "name": "drossel-random",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Unnecessary random string generator",
   "author": "nanocloudx <nanocloudx@gmail.com>",
   "homepage": "http://drossel.io/",
@@ -14,6 +14,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "random"
+    "random", "generator"
   ]
 }

@@ -17,16 +17,16 @@ npm install drossel-random
 var drRandom = require('drossel-random');
 var length = 10;
 var checker = [];
-drRandom(length, checker);
+drRandom.generate(length, checker);
 ```
 
 ## Example
 ### simple
 ```
-drRandom(5) //"xgVbq"
+drRandom.generate(5) //"xgVbq"
 ```
 ```
-drRandom(10) //"BwHriGoBe7"
+drRandom.generate(10) //"BwHriGoBe7"
 ```
 
 ### with duplicate check
@@ -35,9 +35,19 @@ specify the array for duplicate check.
 ```
 var checker = [];
 for (var i = 0; i < 3; i++) {
-  checker.push(drosselRandom(5, checker));
+  checker.push(drRandom.generate(5, checker));
 }
 console.log(checker) //["uL9K3", "Fo2PT", "mSk2V"]
+```
+
+### validator
+if you want check valid "drossel-random" value, use `isValid()`.
+```
+var foo = drRandom.generate(10);
+var bar = '!@#$%^&*()';
+drRandom.isValid(foo, 10); //true
+drRandom.isValid(foo, 5); //false (invalid length)
+drRandom.isValid(bar, 10); //false (invalid string)
 ```
 
 ## Note
